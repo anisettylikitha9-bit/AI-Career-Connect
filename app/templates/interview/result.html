@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Interview Questions: {{ job_role }} - AI Career Connect{% endblock %}
+
+{% block content %}
+<h2><i class="bi bi-patch-question"></i> Interview Questions: {{ job_role }}</h2>
+<div class="card shadow mt-3">
+    <div class="card-body">
+        <div class="questions-content">{{ questions | safe }}</div>
+    </div>
+</div>
+<a href="{{ url_for('interview.index') }}" class="btn btn-secondary mt-3">
+    <i class="bi bi-arrow-left"></i> Back
+</a>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Resume Analyzer - AI Career Connect{% endblock %}
+
+{% block content %}
+<h2><i class="bi bi-file-earmark-text"></i> Resume Analyzer</h2>
+
+<div class="card shadow mt-3">
+    <div class="card-body">
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+                {{ form.resume.label(class="form-label") }}
+                {{ form.resume(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-success") }}
+        </form>
+    </div>
+</div>
+
+{% if past_analyses %}
+<h4 class="mt-4">Past Analyses</h4>
+<div class="list-group">
+    {% for analysis in past_analyses %}
+    <div class="list-group-item">
+        <strong>{{ analysis.filename }}</strong>
+        <small class="text-muted">{{ analysis.created_at.strftime('%Y-%m-%d') }}</small>
+        <p class="mb-0 mt-1">{{ analysis.analysis_text[:150] }}...</p>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

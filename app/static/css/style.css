@@ -1,0 +1,65 @@
+/* ============================================
+   AI Career Connect - Custom Styles
+   ============================================ */
+
+/* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Chat Box */
+#chat-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+#chat-box .bg-primary {
+    border-radius: 18px 18px 4px 18px;
+}
+
+#chat-box .bg-light {
+    border-radius: 18px 18px 18px 4px;
+    border: 1px solid #e9ecef;
+}
+
+/* Dashboard stat cards */
+.card.bg-primary, .card.bg-success, .card.bg-info {
+    border-radius: 16px;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #chat-box {
+        height: 350px !important;
+    }
+}

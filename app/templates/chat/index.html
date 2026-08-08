@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}AI Chat - AI Career Connect{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0"><i class="bi bi-chat-dots"></i> AI Career Advisor</h5>
+                <div>
+                    <button id="btn-new-session" class="btn btn-sm btn-outline-secondary">
+                        <i class="bi bi-plus-circle"></i> New Chat
+                    </button>
+                    <button id="btn-mic" class="btn btn-sm btn-outline-danger">
+                        <i class="bi bi-mic"></i> Voice Input
+                    </button>
+                </div>
+            </div>
+            <div class="card-body" id="chat-box" style="height: 450px; overflow-y: auto;">
+                {% for msg in history %}
+                <div class="mb-3 {{ 'text-end' if msg.role == 'user' else '' }}">
+                    <div class="d-inline-block p-2 rounded {{ 'bg-primary text-white' if msg.role == 'user' else 'bg-light' }}" style="max-width: 75%;">
+                        {{ msg.message }}
+                    </div>
+                    <br>
+                    <small class="text-muted">{{ msg.timestamp.strftime('%H:%M') }}</small>
+                    {% if msg.role == 'assistant' %}
+                    <button class="btn btn-sm btn-link speak-btn" data-text="{{ msg.message }}">
+                        <i class="bi bi-volume-up"></i>
+                    </button>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="card-footer">
+                <div class="input-group">
+                    <input type="text" id="chat-input" class="form-control" placeholder="Ask about your career...">
+                    <button id="btn-send" class="btn btn-primary">
+                        <i class="bi bi-send"></i> Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,33 @@
+# ============================================
+# AI Career Connect - Python Dependencies
+# ============================================
+
+# --- Core Framework ---
+Flask==3.1.1
+Flask-SQLAlchemy==3.1.1
+Flask-Login==0.6.3
+Flask-WTF==1.2.2
+email-validator==2.2.0
+
+# --- Database ---
+SQLAlchemy==2.0.36
+
+# --- AI / LLM ---
+mistralai==1.5.0
+
+# --- Speech Processing ---
+SpeechRecognition==3.14.1
+gTTS==2.5.4
+# PyAudio==0.2.14 # Disabled for Render (only needed for local server mic, not browser-based STT)
+
+# --- Utilities ---
+python-dotenv==1.0.1
+Werkzeug==3.1.3
+pdfminer.six==20231228
+
+# --- Production Deployment (Render) ---
+gunicorn==23.0.0
+psycopg2-binary==2.9.9
+
+# --- Testing ---
+pytest==8.3.4

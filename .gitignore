@@ -1,0 +1,33 @@
+# Environment
+.env
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+instance/
+
+# Uploads
+app/static/uploads/*
+!app/static/uploads/.gitkeep
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
