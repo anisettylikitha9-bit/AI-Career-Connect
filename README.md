@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🤖 AI Career Connect
 
 **AI Career Connect** is an intelligent, web-based career assistant built with **Flask**, **SQLite**, and **Mistral AI**. It helps users get career advice, analyze resumes, practice interview questions, create 6-month career roadmaps, and interact using both text and voice!
@@ -112,3 +113,13 @@ Run the automated test suite to verify all routes, models, and auth functions:
 
 ## 💡 License
 This project is open-source and built for AI Career Connect.
+=======
+# pytest cache directory #
+
+This directory contains data from the pytest's cache plugin,
+which provides the `--lf` and `--ff` options, as well as the `cache` fixture.
+
+**Do not** commit this to version control.
+
+See [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more information.
+>>>>>>> 23cc4f0c6ce394568f312abe518fb026e127e639

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Chat History - AI Career Connect{% endblock %}
+
+{% block content %}
+<h2><i class="bi bi-clock-history"></i> Chat History</h2>
+<div class="list-group mt-3">
+    {% for session_id in sessions %}
+    <a href="{{ url_for('chat.index') }}?session={{ session_id }}" class="list-group-item list-group-item-action">
+        <i class="bi bi-chat-left-text"></i> Session: {{ session_id[:8] }}...
+    </a>
+    {% else %}
+    <p class="text-muted">No chat sessions found.</p>
+    {% endfor %}
+</div>
+{% endblock %}

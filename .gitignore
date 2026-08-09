@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Environment
 .env
 venv/
@@ -31,3 +32,7 @@ app/static/uploads/*
 .DS_Store
 Thumbs.db
 
+=======
+# Created by pytest automatically.
+*
+>>>>>>> 23cc4f0c6ce394568f312abe518fb026e127e639

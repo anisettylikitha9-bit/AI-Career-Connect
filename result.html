@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Resume Analysis Result - AI Career Connect{% endblock %}
+
+{% block content %}
+<h2><i class="bi bi-file-earmark-check"></i> Analysis: {{ filename }}</h2>
+<div class="card shadow mt-3">
+    <div class="card-body">
+        <div class="analysis-content">{{ analysis | safe }}</div>
+    </div>
+</div>
+<a href="{{ url_for('resume.index') }}" class="btn btn-secondary mt-3">
+    <i class="bi bi-arrow-left"></i> Back
+</a>
+{% endblock %}
